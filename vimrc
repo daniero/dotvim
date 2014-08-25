@@ -4,22 +4,49 @@
 "
 
 set nocompatible
-call pathogen#infect()
+
+
+""""""""""
+" BUNDLES
+"
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'YankRing.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpared'
+Plugin 'Raimondi/delimitMate'
+Plugin 'msanders/snipmate.vim'
+Plugin 'Lokaltog/vim-easymotion'
+
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-ruby/vim-ruby'
+
+call vundle#end() 
 
 
 """""""""""""""""
 " STANDARD STUFF
 "
 
-syntax on
 filetype plugin indent on
+syntax on
 
-set number
-set cursorline
-set showcmd
-set hidden
-set history=1000
-set visualbell    " no beeps!
+set number                " Display line numbers
+set cursorline            " Highlight current line
+set showcmd               
+set hidden                " Allow hiding unsaved buffers
+set history=1000          
+set visualbell            " No beeps
+set virtualedit=block     " Allow visual block to stretch beyond EOL
 
 """ colors
 if has('gui')
@@ -63,14 +90,15 @@ set scrolloff=3         " Start scrolling when we're N lines away from margins
 " MAPPINGS OG KOMMANDOER
 "
 
+let mapleader="æ"
+
 """ (Over)write read-only file
 command! W w !sudo tee > /dev/null %
 
-let mapleader="æ"
 map <leader>e :new ~/.vimrc<CR>
 map <leader>E :so ~/.vimrc<CR>
 
-""" switch ; and ,
+""" Switch ; and ,
 noremap , ;
 noremap ; ,
 
@@ -160,9 +188,11 @@ augroup END
 
 let yankring_history_dir = expand('$HOME/.vim')
 let snips_author = "Daniel Rødskog"
-"let delimitMate_expand_cr = 1           " bruker ikke delimitMate lenger...
-"let delimitMate_balance_matchpairs = 1  " bruker ikke delimitMate lenger...
+let delimitMate_expand_cr = 2
+let delimitMate_expand_space = 1
+let delimitMate_balance_matchpairs = 1
 let g:pandoc_use_hard_wraps = 1
 let g:pandoc_auto_format = 1
 let g:EclimCompletionMethod = 'omnifunc'
 let g:EasyMotion_leader_key = 'ø'
+
