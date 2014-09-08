@@ -27,6 +27,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'msanders/snipMate.vim'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'godlygeek/tabular'
 
 """ Color schemes:
 Plugin 'altercation/vim-colors-solarized'
@@ -197,7 +198,7 @@ endfunction
 """ Automatically source .vimrc upon write
 augroup vimrc_filetype
   autocmd!
-  au BufWritePost ~/.vimrc :source %
+  au BufWritePost .vimrc,_vimrc,vimrc :source $MYVIMRC
 augroup end
 
 """ TODO Move to ftplugin/pandoc.vim ??
