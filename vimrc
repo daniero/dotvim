@@ -108,23 +108,9 @@ set scrolloff=3         " Start scrolling when we're N lines away from margins
 
 let mapleader="æ"
 
-""" (Over)write read-only file
-command! W w !sudo tee > /dev/null %
-
-map <leader>e :new ~/.vimrc<CR>
-map <leader>E :so ~/.vimrc<CR>
-
 """ Switch ; and ,
 noremap , ;
 noremap ; ,
-
-map <F5> :NERDTreeToggle<CR>
-
-""" Synced with apple keyboard prev/play/next buttons:
-map <F8> :make<CR>
-map <S-F8> :make clean<CR>
-map <F7> :cprevious<CR>
-map <F9> :cnext<CR>
 
 """ Undoable CTRL-U in insert mode:
 inoremap <C-u> <C-g>u<C-u>
@@ -147,6 +133,12 @@ noremap <CR> :noh<CR><CR>
 map <leader>= :+0 copy +0<CR>Vr=o<ESC>kk
 map <leader>- :+0 copy +0<CR>Vr-o<ESC>kk
 
+""" Synced with Apple keyboard prev/play/next buttons:
+map <F8> :make<CR>
+map <S-F8> :make clean<CR>
+map <F7> :cprevious<CR>
+map <F9> :cnext<CR>
+
 function! ToggleBackgroundColour ()
     if (&background == 'light')
         set background=dark
@@ -157,6 +149,14 @@ function! ToggleBackgroundColour ()
     endif
 endfunction
 map <F6> :call ToggleBackgroundColour()<CR>
+
+map <leader>e :new ~/.vimrc<CR>
+map <leader>E :so ~/.vimrc<CR>
+
+""" (Over)write read-only file
+command! W w !sudo tee > /dev/null %
+
+map <F5> :NERDTreeToggle<CR>
 
 
 """""""""""""""
