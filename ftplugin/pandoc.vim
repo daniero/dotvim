@@ -1,5 +1,5 @@
 setlocal wrapmargin=80 
-setlocal formatoptions+=q
+setlocal textwidth=80 
 setlocal nosmartindent
 
 setlocal keywordprg=dict
