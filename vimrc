@@ -192,7 +192,7 @@ function! ToggleBackgroundColour ()
 endfunction
 map <F6> :call ToggleBackgroundColour()<CR>
 
-nmap <leader>e :new ~/.vimrc<CR>
+nmap <leader>e :new ~/.vim/vimrc<CR>
 nmap <leader>E :so ~/.vimrc<CR>
 
 """ (Over)write read-only file
