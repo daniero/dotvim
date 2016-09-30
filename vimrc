@@ -34,6 +34,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'mileszs/ack.vim'
 "Plugin 'wincent/command-t'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'mrtazz/simplenote.vim'
 "Plugin 'terryma/vim-multiple-cursors'
 
 """ Color schemes:
@@ -296,6 +297,8 @@ let g:airline_detect_whitespace=0
 let g:airline_powerline_fonts = 1
 let g:bufferline_show_bufnr = 0
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+source ~/.vim/simplenoterc.vim
 
 set runtimepath+=~/.vim/bundle/snipMate.vim/after/
 
