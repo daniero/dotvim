@@ -20,16 +20,17 @@ Plugin 'YankRing.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-bufferline'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Raimondi/delimitMate'
-Plugin 'msanders/snipMate.vim'
+"Plugin 'msanders/snipMate.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'mileszs/ack.vim'
 "Plugin 'wincent/command-t'
@@ -55,6 +56,14 @@ Plugin 'marijnh/tern_for_vim'                 " Javascript
 Plugin 'burnettk/vim-angular'
 Plugin 'othree/html5.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'brandonbloom/vim-factor'
+Plugin 'elixir-editors/vim-elixir'
+
+""" Clojure
+"Plugin 'tpope/vim-leiningen.git'
+"Plugin 'tpope/vim-projectionist.git'
+"Plugin 'tpope/vim-dispatch.git'
+"Plugin 'tpope/vim-fireplace.git'
 
 call vundle#end() 
 
@@ -299,6 +308,7 @@ let g:bufferline_show_bufnr = 0
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 source ~/.vim/simplenoterc.vim
+let g:SimplenoteVertical=1
 
 set runtimepath+=~/.vim/bundle/snipMate.vim/after/
 
